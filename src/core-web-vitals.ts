@@ -1,9 +1,9 @@
-import { config } from "typescript-eslint";
+import { config as defineConfig, type Config } from "typescript-eslint";
 import nextPlugin from "@next/eslint-plugin-next";
 
 import baseConfig from ".";
 
-const recommended = config(baseConfig, {
+const recommended: Config = defineConfig(baseConfig, {
   name: "@next/next/recommended",
   plugins: {
     "@next/next": nextPlugin,
@@ -13,7 +13,7 @@ const recommended = config(baseConfig, {
   },
 });
 
-const coreWebVitals = config({
+const coreWebVitals: Config = defineConfig({
   name: "@next/next/core-web-vitals",
   extends: [recommended],
   rules: {

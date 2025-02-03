@@ -1,4 +1,4 @@
-import { config } from "typescript-eslint";
+import { config as defineConfig } from "typescript-eslint";
 import coreWebVitals from "./src/core-web-vitals";
 
-export default config(coreWebVitals);
+export default defineConfig(coreWebVitals);

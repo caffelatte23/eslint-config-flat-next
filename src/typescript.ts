@@ -1,5 +1,5 @@
-import { plugin } from "typescript-eslint";
+import { configs, type ConfigArray } from "typescript-eslint";
 
-const typescript = plugin.configs?.recommended ?? {};
+const typescript: ConfigArray = configs.recommended;
 
 export default typescript;

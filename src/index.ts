@@ -1,4 +1,8 @@
-import { config, parser } from "typescript-eslint";
+import {
+  config as defineConfig,
+  parser,
+  type ConfigArray,
+} from "typescript-eslint";
 import nextPlugin from "@next/eslint-plugin-next";
 import reactPlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
@@ -6,7 +10,7 @@ import importPlugin from "eslint-plugin-import";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import babelParser from "@babel/eslint-parser";
 
-const baseConfig = config(
+const baseConfig: ConfigArray = defineConfig(
   {
     name: "next:flat/recommended",
     extends: [
